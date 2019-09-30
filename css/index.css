@@ -1,0 +1,361 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+.download-btn {
+  padding: 5px 20px;
+  background: #cd4148;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Rock Salt', cursive;
+  font-size: 0.8rem;
+  transition: 1s;
+}
+.button-hover {
+  background: white;
+  color: #cd4148;
+  border: 1px solid #cd4148;
+}
+.icon-tag {
+  font-size: 3rem;
+  color: black;
+  transition: 0.5s;
+}
+.icon-hover {
+  color: #cd4148;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  border: 1px solid black;
+  width: 800px;
+  background: black;
+  padding: 20px 0;
+}
+@media (max-width: 800px) {
+  .container header {
+    width: 700px;
+  }
+}
+@media (max-width: 500px) {
+  .container header {
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+  }
+  .container header nav {
+    flex-direction: column;
+    align-content: center;
+    margin-top: 20px;
+  }
+  .container header nav a {
+    margin: 10px;
+  }
+}
+.container header h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2em;
+}
+.container header h1 a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+.container nav {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+.container nav a {
+  margin: 0 25px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Architects Daughter', cursive;
+}
+.container section {
+  padding-top: 75px;
+}
+@media (max-width: 500px) {
+  .container section {
+    padding-top: 200px;
+  }
+}
+.container .home-top {
+  display: flex;
+  justify-content: space-around;
+  margin: 2% 0;
+}
+.container .home-top .img-profile img {
+  width: 60%;
+  border-radius: 50%;
+  margin: 0 20%;
+}
+.container .home-top .home-content {
+  padding: 2% 0.5%;
+  width: 100%;
+}
+.container .home-top .home-content h3 {
+  font-family: 'Architects Daughter', cursive;
+  margin: 3% 0;
+}
+.container .home-top .home-content p {
+  font-family: 'Cinzel', serif;
+}
+@media (max-width: 500px) {
+  .container .home-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .home-top .home-top {
+    width: 100%;
+  }
+}
+.container .btn {
+  text-align: center;
+  margin: 7% 0;
+}
+.container .btn a {
+  text-decoration: none;
+}
+.container .btn a button {
+  padding: 5px 20px;
+  background: #cd4148;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Rock Salt', cursive;
+  font-size: 0.8rem;
+  transition: 1s;
+}
+.container .btn a button:hover {
+  background: white;
+  color: #cd4148;
+  border: 1px solid #cd4148;
+}
+.container #education {
+  display: flex;
+  justify-content: space-between;
+}
+.container #education .education-top {
+  width: 100%;
+  margin: 5% 0;
+}
+.container #education .education-top .education-content {
+  padding: 0 1.5%;
+}
+.container #education .education-top .education-content h3 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.5rem;
+  margin: 5% 0;
+}
+.container #education .education-top .education-content h4 {
+  font-family: 'Architects Daughter', cursive;
+  margin: 2% 0;
+}
+.container #education .education-top .education-content p {
+  font-family: 'Cinzel', serif;
+  margin: 1.5% 0;
+}
+@media (max-width: 500px) {
+  .container #education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container #education .education-top {
+    width: 100%;
+  }
+}
+.container #experience .experience-top {
+  margin: 5% 0;
+}
+.container #experience .experience-top .experience-content {
+  margin: 2% 0;
+}
+.container #experience .experience-top .experience-content h3 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.3rem;
+  margin: 2% 0;
+}
+.container #experience .experience-top .experience-content h4 {
+  font-family: 'Architects Daughter', cursive;
+  margin: 2% 0;
+}
+.container #experience .experience-top .experience-content p {
+  font-family: 'Cinzel', serif;
+  margin: 1.5% 0;
+}
+.container .contact-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 150px;
+}
+.container .contact-content a {
+  font-size: 3rem;
+  color: black;
+  transition: 0.5s;
+}
+.container .contact-content a:hover {
+  color: #cd4148;
+}
+.container footer {
+  text-align: center;
+  margin: 50px 0;
+}
+.container footer h1 {
+  font-family: 'Rock Salt', cursive;
+}
+.container footer h1 i {
+  font-size: 2rem;
+  color: #cd4148;
+}

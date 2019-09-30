@@ -1,0 +1,349 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+    height: 100%;
+}
+
+
+// ########################
+// Less Global Variables
+// ########################
+
+// Colors
+@primary-color: #cd4148;
+
+
+// Fonts
+@big-letters: 'Rock Salt', cursive;
+@small-letters: 'Architects Daughter', cursive;
+@reading-letters: 'Cinzel', serif;
+
+
+
+// ########################
+// Mixins
+// ########################
+
+
+// Download Button Mixin
+.download-btn {
+	padding: 5px 20px;;
+	background: @primary-color;
+	border-radius: 5px;
+	color: white;
+	font-family: @big-letters;
+	font-size: .8rem;
+	transition: 1s;
+}
+
+.button-hover {
+	background: white;
+	color: @primary-color;
+	border: 1px solid @primary-color;
+}
+
+
+// Icon Hover Mixin
+.icon-tag {
+	font-size: 3rem;
+	color: black;
+	transition: .5s;
+}
+
+.icon-hover {
+	color: @primary-color;
+}
+
+
+
+
+
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	// border-top: 1px solid black;
+
+	@media(max-width: 800px) {
+		width: 700px;
+	}// Media Query 800px
+
+	@media(max-width: 500px) {
+		width: 400px;	
+	}// Media Query 500px
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		border: 1px solid black;
+		width: 800px;
+		background: black;
+		padding: 20px 0;
+
+		@media(max-width: 800px) {
+			width: 700px;
+		}
+	
+		@media(max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+			width: 400px;
+			
+			nav {
+				flex-direction: column;
+				align-content: center;
+				margin-top: 20px;
+	
+				a {
+					margin: 10px;
+				}
+			}
+		}// Media Query 500px
+		
+	
+		h1 {
+			font-family: @big-letters;
+			font-size: 2em;
+			
+			a {
+				color: white;
+				text-decoration: none;
+				margin: 0 20px;
+			}
+		}
+	}// Header
+	
+	nav {
+		display: flex;
+		justify-content: space-evenly;
+		color: white;
+	
+		a {
+			margin: 0 25px;
+			color: white;
+			text-decoration: none;
+			font-family: @small-letters;
+		}
+	}// Nav
+	
+	section {
+		padding-top: 75px;
+	
+		@media(max-width: 500px) {
+			padding-top: 200px
+			
+		}// Media Query 500px
+	
+	}// Section
+	
+	.home-top {
+		display: flex;
+		justify-content: space-around;
+		margin: 2% 0;
+	
+			.img-profile {
+					img {
+						width: 60%;
+						border-radius: 50%;
+						margin: 0 20%;
+						// border: 1px solid red;
+					}	
+				}
+	
+			.home-content {
+				padding: 2% .5%;
+				width: 100%;
+				// border: 1px solid orange;
+		
+				h3 {
+					font-family: @small-letters;
+					margin: 3% 0;
+				}
+		
+				p {
+					font-family: @reading-letters;
+				}
+			}	
+	
+		@media(max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+	
+			.home-top {
+				width: 100%;
+			}
+		}// Media Query 500px
+	}// Home-Top
+	
+
+	.btn {
+		text-align: center;
+		margin: 7% 0;
+		a {
+			text-decoration: none;
+	
+			button {
+				.download-btn();
+			}
+
+			button:hover {
+				.button-hover();
+			}
+		}
+	}// btn
+	
+	#education {
+		display: flex;
+		justify-content: space-between;
+	
+		.education-top {
+			width: 100%;
+			margin: 5% 0;
+			// border: 1px solid green;
+	
+			.education-content {
+				padding: 0 1.5%;
+	
+				h3 {
+					font-family: @small-letters;
+					font-size: 1.5rem;
+					margin: 5% 0;
+				}
+	
+				h4 {
+					font-family: @small-letters;
+					margin: 2% 0;
+				}
+	
+				p {
+					font-family: @reading-letters;
+					margin: 1.5% 0;
+				}
+			}
+		}
+
+		@media(max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+	
+			.education-top {
+				width: 100%;
+			}
+		}// Media Query 500px
+	}// Education
+	
+	#experience {
+	
+		.experience-top {
+			margin: 5% 0;
+	
+			.experience-content {
+				margin: 2% 0;
+				// border: 1px solid blue;
+	
+				h3 {
+					font-family: @big-letters;
+					font-size: 1.3rem;
+					margin: 2% 0;
+				}
+	
+				h4 {
+					font-family: @small-letters;
+					margin: 2% 0;
+				}
+	
+				p {
+					font-family: @reading-letters;
+					margin: 1.5% 0;
+				}
+			}
+		}
+	}
+
+	.contact-content {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		margin-bottom: 150px;
+
+		a {
+			.icon-tag()
+		}
+		a:hover {
+			.icon-hover()
+		}
+
+	}
+	
+	
+	footer {
+		text-align: center;
+		margin: 50px 0;
+		h1 {
+			font-family: @big-letters;
+			i {
+				font-size: 2rem;
+				color: @primary-color;
+			}
+		}
+	}
+}// Container
+
